@@ -10,7 +10,7 @@ class Course with _$Course {
     required String name,
     required int credits,
     @JsonKey(name: 'dept_id') required int departmentId,
-    @JsonKey(name: 'professor_id') required int professorId,
+    @JsonKey(name: 'professor_id') required String professorId,
   }) = _Course;
 
   factory Course.fromJson(Map<String, dynamic> json) => _$CourseFromJson(json);

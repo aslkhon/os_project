@@ -11,7 +11,7 @@ _$_Course _$$_CourseFromJson(Map<String, dynamic> json) => _$_Course(
       name: json['name'] as String,
       credits: json['credits'] as int,
       departmentId: json['dept_id'] as int,
-      professorId: json['professor_id'] as int,
+      professorId: json['professor_id'] as String,
     );
 
 Map<String, dynamic> _$$_CourseToJson(_$_Course instance) => <String, dynamic>{

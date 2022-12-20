@@ -26,7 +26,7 @@ mixin _$Course {
   @JsonKey(name: 'dept_id')
   int get departmentId => throw _privateConstructorUsedError;
   @JsonKey(name: 'professor_id')
-  int get professorId => throw _privateConstructorUsedError;
+  String get professorId => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -43,7 +43,7 @@ abstract class $CourseCopyWith<$Res> {
       String name,
       int credits,
       @JsonKey(name: 'dept_id') int departmentId,
-      @JsonKey(name: 'professor_id') int professorId});
+      @JsonKey(name: 'professor_id') String professorId});
 }
 
 /// @nodoc
@@ -85,7 +85,7 @@ class _$CourseCopyWithImpl<$Res, $Val extends Course>
       professorId: null == professorId
           ? _value.professorId
           : professorId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
     ) as $Val);
   }
 }
@@ -101,7 +101,7 @@ abstract class _$$_CourseCopyWith<$Res> implements $CourseCopyWith<$Res> {
       String name,
       int credits,
       @JsonKey(name: 'dept_id') int departmentId,
-      @JsonKey(name: 'professor_id') int professorId});
+      @JsonKey(name: 'professor_id') String professorId});
 }
 
 /// @nodoc
@@ -140,7 +140,7 @@ class __$$_CourseCopyWithImpl<$Res>
       professorId: null == professorId
           ? _value.professorId
           : professorId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
     ));
   }
 }
@@ -169,7 +169,7 @@ class _$_Course implements _Course {
   final int departmentId;
   @override
   @JsonKey(name: 'professor_id')
-  final int professorId;
+  final String professorId;
 
   @override
   String toString() {
@@ -215,7 +215,7 @@ abstract class _Course implements Course {
           required final String name,
           required final int credits,
           @JsonKey(name: 'dept_id') required final int departmentId,
-          @JsonKey(name: 'professor_id') required final int professorId}) =
+          @JsonKey(name: 'professor_id') required final String professorId}) =
       _$_Course;
 
   factory _Course.fromJson(Map<String, dynamic> json) = _$_Course.fromJson;
@@ -231,7 +231,7 @@ abstract class _Course implements Course {
   int get departmentId;
   @override
   @JsonKey(name: 'professor_id')
-  int get professorId;
+  String get professorId;
   @override
   @JsonKey(ignore: true)
   _$$_CourseCopyWith<_$_Course> get copyWith =>
